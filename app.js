@@ -12,8 +12,17 @@ async function fetchWeather(city) {
     document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
     document.querySelector(".wind-speed").innerHTML = `${data.wind.speed} km/h`;
 
-    console.log(data);
-    if(data.weather[0].main == "Clear"){ 
+if(data.cod == "404"){
+    document.querySelector("h3").innerHTML = "City not found";
+    document.querySelector(".weather-icon").src = "notfound.png";
+    document.querySelector(".temperature").innerHTML = `invalid City name`;
+    document.querySelector(".humidity").innerHTML = `invalid City name`;
+    document.querySelector(".wind-speed").innerHTML = `invalid City name`;
+    alert("City not found");
+}
+console.log(data);
+
+if(data.weather[0].main == "Clear"){ 
     document.querySelector("h3").innerHTML = "Clear";
     document.querySelector(".weather-icon").src = "clear.png";
 }
