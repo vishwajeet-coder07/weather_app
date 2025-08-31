@@ -42,6 +42,7 @@ else{
     document.querySelector(".weather-icon").src = "clear.png";
 }
 document.querySelector(".weather").style.display = "block";
+document.querySelector(".heading").style.display = "none";
 }
 searchBtn.addEventListener("click", () => {
     fetchWeather(searchBox.value);
