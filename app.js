@@ -8,17 +8,19 @@ async function fetchWeather(city) {
     const response = await fetch(`${baseUrl}${city}&appid=${apikey}`);
     var data = await response.json();
     document.querySelector(".city").innerHTML = `${data.name}`;
-    document.querySelector(".temperature").innerHTML = `${data.main.temp}°c`;
-    document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
-    document.querySelector(".wind-speed").innerHTML = `${data.wind.speed} km/h`;
+   
 
 if(data.cod == "404"){
     document.querySelector("h3").innerHTML = "City not found";
     document.querySelector(".weather-icon").src = "notfound.png";
-    document.querySelector(".temperature").innerHTML = `invalid City name`;
-    document.querySelector(".humidity").innerHTML = `invalid City name`;
-    document.querySelector(".wind-speed").innerHTML = `invalid City name`;
+    document.querySelector(".temperature").style.display = `none`;
+    document.querySelector(".humidity").style.display = `none`;
+    document.querySelector(".wind-speed").style.display = `none`;
     alert("City not found");
+}else{
+     document.querySelector(".temperature").innerHTML = `${data.main.temp}°c`;
+    document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
+    document.querySelector(".wind-speed").innerHTML = `${data.wind.speed} km/h`;
 }
 console.log(data);
 
