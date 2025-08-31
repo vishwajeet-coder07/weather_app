@@ -18,6 +18,9 @@ if(data.cod == "404"){
     document.querySelector(".wind-speed").style.display = `none`;
     alert("City not found");
 }else{
+    document.querySelector(".temperature").style.display = `block`;
+    document.querySelector(".humidity").style.display = `block`;
+    document.querySelector(".wind-speed").style.display = `block`;
      document.querySelector(".temperature").innerHTML = `${data.main.temp}°c`;
     document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
     document.querySelector(".wind-speed").innerHTML = `${data.wind.speed} km/h`;
