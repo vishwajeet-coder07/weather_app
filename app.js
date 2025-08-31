@@ -43,6 +43,7 @@ else{
 }
 document.querySelector(".weather").style.display = "block";
 document.querySelector(".heading").style.display = "none";
+console.log(data);
 }
 searchBtn.addEventListener("click", () => {
     fetchWeather(searchBox.value);
