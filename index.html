@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Search for a city">
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="weather">
+            <img class="weather-icon" src="image.png" alt="weather-icon">
+            <h3>clear</h3>
+            <div class="temp"><img src="thermometer.png" alt="thermometer-icon">
+            <h1 class="temperature">25°c</h1>
+            </div>
+            <h2 class="city">Akgec</h2>
+            <div class="details">
+                <div class="col humi">
+                    <img src="humidity.png" alt="humidity-icon">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col win">
+                    <img src="wind.png" alt="wind-speed-icon">
+                    <div>
+                        <p class="wind-speed">10 km/h</p>
+                        <pre>    Wind Speed</pre>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <script src="app.js"></script>
+</body>
+</html>
