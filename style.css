@@ -5,10 +5,13 @@
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
+hr{
+    border: 0;
+    height: 0.5px;
+    background: #fff;
+    margin: 20px 0;
+}
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #173734;
     overflow: hidden;
 }
