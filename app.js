@@ -10,7 +10,7 @@ async function fetchWeather(city) {
     document.querySelector(".city").innerHTML = `${data.name}`;
    
 
-if(data.cod == "404"){
+if(data.cod == "404" || searchBox.value == "" || searchBox.value == Number){
     document.querySelector("h3").innerHTML = "City not found";
     document.querySelector(".weather-icon").src = "notfound.png";
     document.querySelector(".temperature").style.display = `none`;
